@@ -2,7 +2,10 @@ import Register from './components/Register/Register';
 import './App.css';
 import React, { useState } from 'react';
 import Login from './components/Login/Login';
-// import Login from './components/Login/Login';
+// import Product from './components/Product/Product';
+import { CartProvider, useCart } from 'react-use-cart';
+import Shop from './components/Shop/Shop';
+import Cart from './components/Cart/Cart';
 
 function App() {
   const [userSign, setUserSign] = useState({
@@ -20,8 +23,12 @@ function App() {
 
   return (
     <div className="App">
-      <Register userSign={userSign} setUserSign={setUserSign} />
-      <Login userLogin={userLogin} setUserLogin={setUserLogin} />
+      <CartProvider>
+        <Shop />
+        <Register userSign={userSign} setUserSign={setUserSign} />
+        <Login userLogin={userLogin} setUserLogin={setUserLogin} />
+        <Cart />
+      </CartProvider>
     </div>
   );
 }
