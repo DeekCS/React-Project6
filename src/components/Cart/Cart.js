@@ -25,6 +25,15 @@ const Cart = () => {
       setDiscountedTotal(cartTotal * 0.9);
       setSubTotal(cartTotal * 0.9);
       setDiscountClicked(true);
+      localStorage.getItem('react-use-cart') &&
+        localStorage.setItem(
+          'react-use-cart',
+          JSON.stringify({
+            ...JSON.parse(localStorage.getItem('react-use-cart')),
+            discount: 0.1,
+            cartTotal: cartTotal * 0.9,
+          })
+        );
     } else {
       setDiscount(0);
       setDiscountedTotal(cartTotal);
@@ -37,6 +46,15 @@ const Cart = () => {
     if (discountClicked) {
       setDiscountedTotal(cartTotal * 0.9);
       setSubTotal(cartTotal * 0.9);
+      localStorage.getItem('react-use-cart') &&
+        localStorage.setItem(
+          'react-use-cart',
+          JSON.stringify({
+            ...JSON.parse(localStorage.getItem('react-use-cart')),
+            discount: 0.1,
+            cartTotal: cartTotal * 0.9,
+          })
+        );
     } else {
       setDiscountedTotal(cartTotal);
       setSubTotal(cartTotal);
