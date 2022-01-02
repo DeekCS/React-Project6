@@ -11,6 +11,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-use-cart": "^1.13.0",
+    "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
@@ -36,5 +37,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
+    "prettier": "2.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
