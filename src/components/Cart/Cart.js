@@ -21,6 +21,7 @@ const Cart = () => {
     updateItemQuantity,
     removeItem,
     cartTotal,
+    emptyCart,
   } = useCart();
 
   //handle custom discount
@@ -121,6 +122,45 @@ const Cart = () => {
     });
   };
 
+  const handleClearCart = (items) => {
+    swal({
+      title: 'Are you sure?',
+      text: 'Once deleted, you will not be able to recover this imaginary file!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((r) => {
+      if (r) {
+        emptyCart();
+        swal('Poof! Your imaginary file has been deleted!', {
+          icon: 'success',
+        }).then(
+          () =>
+            localStorage.getItem('react-use-cart') &&
+            localStorage.setItem(
+              'react-use-cart',
+              JSON.stringify({
+                ...JSON.parse(localStorage.getItem('react-use-cart')),
+                cartTotal: 0,
+              })
+            )
+        );
+      } else {
+        swal('Your imaginary file is safe!').then(
+          () =>
+            localStorage.getItem('react-use-cart') &&
+            localStorage.setItem(
+              'react-use-cart',
+              JSON.stringify({
+                ...JSON.parse(localStorage.getItem('react-use-cart')),
+                cartTotal: cartTotal,
+              })
+            )
+        );
+      }
+    });
+  };
+
   return (
     <div className={'cart-container'} style={CartStyle.div}>
       <div className="cart-title">
@@ -174,6 +214,10 @@ const Cart = () => {
               ))}
             </TableBody>
           </Table>
+          <Button>
+            <Link to="/checkout">Checkout</Link>
+          </Button>
+          <Button onClick={() => handleClearCart(items)}>Clear Cart </Button>
         </TableContainer>
       )}
       {isEmpty ? (
@@ -187,18 +231,23 @@ const Cart = () => {
             <input
               type="text"
               value={coupon}
+              placeholder="Enter a coupon code"
               onChange={(e) => setCoupon(e.target.value)}
             />
             <button type="submit">Apply</button>
           </form>
-          <div>
-            <p>Subtotal: ${subTotal}</p>
-            <p>Discount: ${discount}</p>
-            <p>Total: ${discountedTotal}</p>
-          </div>
+          Total: ${cartTotal}
+          <br />
+          {discountClicked ? (
+            <p>
+              You Save: ${cartTotal - discountedTotal}
+              <br />
+              Total After Discount: ${subTotal}
+            </p>
+          ) : null}
+          <br />
         </div>
       )}
-
       <Link to="/shop">Continue Shopping</Link>
     </div>
   );

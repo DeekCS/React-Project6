@@ -13,21 +13,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import React, { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-const headersData = [
-  {
-    label: 'Home',
-    href: '/',
-  },
-  {
-    label: 'Shop',
-    href: '/shop',
-  },
-  {
-    label: 'Cart',
-    href: '/cart',
-  },
-];
-
 const useStyles = makeStyles(() => ({
   header: {
     backgroundColor: '#400CCC',
@@ -72,9 +57,33 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Header() {
+export default function Header({
+  setUiAvatars,
+  setAvatarURL,
+  avatarURL,
+  uiavatars,
+}) {
   const { header, logo, menuButton, toolbar, drawerContainer, menuLinksWeb } =
     useStyles();
+
+  // useEffect(() => {
+  //   if (loggedUser) {
+  //     const uiavatars = require('ui-avatars');
+  //     const avatarURL = uiavatars.generateAvatar({
+  //       uppercase: true,
+  //
+  //       name: `${loggedUser.firstName} ${loggedUser.lastName}`,
+  //       background: 'f3f3f3',
+  //       fontsize: 0.4,
+  //       color: '5A66D7',
+  //       bold: true,
+  //       length: 2,
+  //       rounded: true,
+  //     });
+  //     setUiAvatars(uiavatars);
+  //     setAvatarURL(avatarURL);
+  //   }
+  // });
 
   const [state, setState] = useState({
     mobileView: false,

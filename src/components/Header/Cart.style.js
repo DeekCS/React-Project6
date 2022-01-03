@@ -21,7 +21,7 @@ const cartStyle = {
     fontSize: '0.8em',
   },
   div: {
-    margin: '10rem auto',
+    margin: '5rem auto',
     width: '100%',
     maxWidth: '800px',
   },

@@ -7583,6 +7583,11 @@ react-transition-group@^4.4.0, react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-ui-avatars@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-ui-avatars/-/react-ui-avatars-3.0.2.tgz#5828bd4c11098b03188ee0c6fca2d65f8ce664fd"
+  integrity sha512-MU0IU5rHVEwHzSc/I8I01fkB64gFWcn3Ia+uC2FekpNgYffboVae+IAp92Syf2tQ2Z6lYkzYoumfpZRIdFMOsw==
+
 react-use-cart@^1.13.0:
   version "1.13.0"
   resolved "https://registry.npmjs.org/react-use-cart/-/react-use-cart-1.13.0.tgz"

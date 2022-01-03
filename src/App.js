@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Services from './components/Services/Services';
+import Profile from './components/Profile/Profile';
 
 function App() {
   const [userSign, setUserSign] = useState({
@@ -44,6 +45,7 @@ function App() {
               }
             />
             <Route path="/services" element={<Services />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
