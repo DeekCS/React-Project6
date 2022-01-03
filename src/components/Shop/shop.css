@@ -1,0 +1,62 @@
+.showProduct {
+  display: grid;
+  grid-template-areas: 'image' 'description' 'price';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .showProduct {
+    grid-template-areas: 'image' 'description' 'price';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .showProduct {
+    grid-template-areas: 'image' 'description' 'price';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    grid-gap: 10px;
+    align-items: center;
+  }
+}
+/*product*/
+.services-container {
+  width: 100%;
+  height: 500px;
+  background: url(/public/assets/services-bg.png) no-repeat center center;
+  background-size: cover;
+}
+
+.services-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-content h4 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.services-content p {
+  color: #fff;
+  font-size: 1.5rem;
+}

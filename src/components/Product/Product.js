@@ -3,7 +3,17 @@ import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-// import '../ProductCard/card.css';
+import './product.css';
+import {
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+} from '@mui/material';
+import swal from 'sweetalert';
+import Button from '@mui/material/Button';
 
 const Product = (props) => {
   const { addItem } = useCart();
@@ -11,21 +21,82 @@ const Product = (props) => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  const handleAddToCart = (product) => {
+    addItem(product);
+    swal({
+      title: 'Added to cart',
+      text: `${product.name} has been added to your cart`,
+      icon: 'success',
+      button: false,
+      timer: 1000,
+    });
+  };
+
+  //style for the card using material-ui
+
+  const cardStyle = {
+    width: '300px',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '10px',
+    boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.5)',
+    borderRadius: '10px',
+    // backgroundColor: '#fff',
+    color: '#000',
+    fontFamily: 'Roboto',
+    fontSize: '1.2rem',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  };
+
   return (
-    <figure className="snip1268" data-aos="fade-up">
-      <div className="image">
-        <img src={props.src} alt={props.alt} />
-        <button className="add-to-cart1" onClick={() => addItem(props.item)}>
-          Add to Cart
-        </button>
-      </div>
-      <figcaption className="card-content">
-        {/*<h2 className="title-desc">*/}
-        {/*  <Link to={`/shop/${props.productName}`}>{props.productName}</Link>*/}
-        {/*</h2>*/}
-        <div className="price">{props.price} JD</div>
-      </figcaption>
-    </figure>
+    <>
+      <Card
+        sx={{ maxWidth: 345 }}
+        // style={cardStyle}
+        className="card"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+        <CardActionArea>
+          <CardMedia
+            alt={props.alt}
+            component="img"
+            height="180"
+            image={props.src}
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h5"
+              color="primary"
+              component="div"
+            >
+              ${props.price}
+            </Typography>
+            <Typography variant="h6" component="p">
+              {props.productName}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Link to={`/products/${props.id}`}>
+            <Button color="primary" variant="contained">
+              View Product
+            </Button>
+          </Link>
+          <Button
+            className="btn btn-primary"
+            onClick={() => handleAddToCart(props.item)}
+          >
+            Add to Cart
+          </Button>
+        </CardActions>
+      </Card>
+    </>
   );
 };
 export default Product;

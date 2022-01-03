@@ -2,10 +2,12 @@ import Register from './components/Register/Register';
 import './App.css';
 import React, { useState } from 'react';
 import Login from './components/Login/Login';
-// import Product from './components/Product/Product';
 import { CartProvider, useCart } from 'react-use-cart';
 import Shop from './components/Shop/Shop';
 import Cart from './components/Cart/Cart';
+import Header from './components/Header/Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Services from './components/Services/Services';
 
 function App() {
   const [userSign, setUserSign] = useState({
@@ -24,10 +26,26 @@ function App() {
   return (
     <div className="App">
       <CartProvider>
-        <Shop />
-        <Register userSign={userSign} setUserSign={setUserSign} />
-        <Login userLogin={userLogin} setUserLogin={setUserLogin} />
-        <Cart />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route
+              path="/register"
+              element={
+                <Register userSign={userSign} setUserSign={setUserSign} />
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <Login userLogin={userLogin} setUserLogin={setUserLogin} />
+              }
+            />
+            <Route path="/services" element={<Services />} />
+          </Routes>
+        </BrowserRouter>
       </CartProvider>
     </div>
   );

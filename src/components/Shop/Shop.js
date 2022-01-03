@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import data from '../Cart/Data';
 import Product from '../Product/Product';
 import { Link } from 'react-router-dom';
-// import './Shop.css';
+import './shop.css';
 
 const Shop = () => {
   const [value, setValue] = useState('');
@@ -54,6 +54,14 @@ const Shop = () => {
           </option>
         </select>
       </form>
+      <div className="services-container">
+        <div className="services-overlay">
+          <div className="services-content">
+            <h4>Shop</h4>
+            <p>Try "Discount" Coupons, Get 10%, and more.</p>
+          </div>
+        </div>
+      </div>
       <div className="showProduct">
         {newData.map((item, id) => (
           <Product
