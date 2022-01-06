@@ -9,6 +9,8 @@ import Header from './components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Services from './components/Services/Services';
 import Profile from './components/Profile/Profile';
+import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [userSign, setUserSign] = useState({
@@ -46,7 +48,9 @@ function App() {
             />
             <Route path="/services" element={<Services />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/" element={<Home />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </div>

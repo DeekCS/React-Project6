@@ -1,0 +1,32 @@
+.shop-container {
+  width: 100%;
+  height: 300px;
+  background: url(https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.shop-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .shop-content h4 {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  & .shop-content p {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

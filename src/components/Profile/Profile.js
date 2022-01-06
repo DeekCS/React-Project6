@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './profile.css';
 import { Link, useNavigate } from 'react-router-dom';
 import TableContainer from '@mui/material/TableContainer';
@@ -23,6 +23,18 @@ const Profile = (props) => {
   let userAppointments = user.appointments;
 
   const { email, username } = user;
+
+  const logout = () => {
+    localStorage.removeItem('loggedUser');
+    localStorage.removeItem('react-use-cart');
+    navigate('/');
+  };
+
+  useEffect(() => {
+    if (!loggedUser) {
+      navigate('/');
+    }
+  }, [loggedUser, navigate]);
 
   const localData = JSON.parse(localStorage.getItem('react-use-cart'));
   const { items } = localData;
@@ -56,6 +68,11 @@ const Profile = (props) => {
             <div className="profile-body-left-body-password">
               <h3>Password:</h3>
               <p>{userPassword}</p>
+            </div>
+            <div className={'logout'}>
+              <Button variant="contained" color="primary" onClick={logout}>
+                Logout
+              </Button>
             </div>
           </div>
         </div>

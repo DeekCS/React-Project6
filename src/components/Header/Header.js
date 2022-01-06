@@ -12,10 +12,11 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import CartIcon from '../CartIcon/CartIcon';
 
 const useStyles = makeStyles(() => ({
   header: {
-    backgroundColor: '#400CCC',
+    backgroundColor: '#00121b',
     paddingRight: '79px',
     paddingLeft: '118px',
     '@media (max-width: 900px)': {
@@ -66,24 +67,7 @@ export default function Header({
   const { header, logo, menuButton, toolbar, drawerContainer, menuLinksWeb } =
     useStyles();
 
-  // useEffect(() => {
-  //   if (loggedUser) {
-  //     const uiavatars = require('ui-avatars');
-  //     const avatarURL = uiavatars.generateAvatar({
-  //       uppercase: true,
-  //
-  //       name: `${loggedUser.firstName} ${loggedUser.lastName}`,
-  //       background: 'f3f3f3',
-  //       fontsize: 0.4,
-  //       color: '5A66D7',
-  //       bold: true,
-  //       length: 2,
-  //       rounded: true,
-  //     });
-  //     setUiAvatars(uiavatars);
-  //     setAvatarURL(avatarURL);
-  //   }
-  // });
+  // let { totalItems } = useCart();
 
   const [state, setState] = useState({
     mobileView: false,

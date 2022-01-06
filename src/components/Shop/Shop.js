@@ -3,7 +3,7 @@ import data from '../Cart/Data';
 import Product from '../Product/Product';
 import { Link } from 'react-router-dom';
 import './shop.css';
-
+import CartIcon from '../CartIcon/CartIcon';
 const Shop = () => {
   const [value, setValue] = useState('');
   const [newData, setNewData] = useState(data);
@@ -27,10 +27,8 @@ const Shop = () => {
 
   return (
     <>
+      <CartIcon />
       <form>
-        {/*<p className="breadCrump">*/}
-        {/*  <Link to="/">Home</Link>/ <Link to="/shop">Shop</Link>*/}
-        {/*</p>*/}
         <select
           className="btn btn-primary"
           id="rating-filter"

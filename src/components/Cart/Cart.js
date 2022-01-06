@@ -24,7 +24,6 @@ const Cart = () => {
     emptyCart,
   } = useCart();
 
-  //handle custom discount
   const [coupon, setCoupon] = useState('');
   const [subTotal, setSubTotal] = useState(cartTotal);
   const [discount, setDiscount] = useState(0);
@@ -32,7 +31,7 @@ const Cart = () => {
   const [discountClicked, setDiscountClicked] = useState(false);
   const handleCoupon = (e) => {
     e.preventDefault();
-    //save coupon to local storage
+
     if (coupon === '') {
       swal('Oops!', 'Please enter a coupon code', 'error').then((_) => {
         setCoupon('');
@@ -122,7 +121,7 @@ const Cart = () => {
     });
   };
 
-  const handleClearCart = (items) => {
+  const handleClearCart = (products) => {
     swal({
       title: 'Are you sure?',
       text: 'Once deleted, you will not be able to recover this imaginary file!',

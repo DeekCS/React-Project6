@@ -1,9 +1,9 @@
 const services = [
   {
     id: 1,
-    title: 'electrician Repair',
+    title: 'Computer Repair',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+      'Repair of all types of computers, laptops, tablets, and other electronic devices. We also offer a variety of services to help you get the most out of your computer.',
     icon: '/assets/electrician.png',
     price: 11,
     list: ['Hi', 'Hello', 'Bye'],
