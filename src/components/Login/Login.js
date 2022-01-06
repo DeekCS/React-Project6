@@ -2,6 +2,8 @@ import React from 'react';
 import './login.css';
 
 import swal from 'sweetalert';
+import regLogo from '../Register/register-onilne.jpg';
+import { Link } from 'react-router-dom';
 
 const Login = ({ userLogin, setUserLogin, isSuccess }) => {
   const handleChange = (e) => {
@@ -49,39 +51,46 @@ const Login = ({ userLogin, setUserLogin, isSuccess }) => {
   };
 
   return (
-    <div className="login">
-      <div className="login-container">
-        <div className="login-title">
-          <h1>Login</h1>
-        </div>
-        <div className="login-form">
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <button type="submit">Login</button>
-              {/*<p>*/}
-              {/*  don't have an account? <Link to="/register">Register</Link>*/}
-              {/*</p>*/}
-            </div>
-          </form>
-        </div>
+    <div className="big__container">
+      <div className={'register-img'}>
+        <img src={regLogo} alt={'register'} />
+      </div>
+      <div className="register-container">
+        <h1 id="main-title">Login</h1>
+        <p id="subtitle">Welcome Again!</p>
+        <form className={'register-form'} onSubmit={handleSubmit}>
+          <div className="placeholders">
+            <label id="pl_first_name" htmlFor="text" className="">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email..."
+              onChange={handleChange}
+            />
+          </div>
+          <div className="placeholders">
+            <label htmlFor="text" className="">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password..."
+              onChange={handleChange}
+            />
+          </div>
+          <p className={'login-btn'}>
+            Don't have an account?
+            <Link to="/register">
+              <span className="login-link">Register</span>
+            </Link>
+          </p>
+          <button id="a-submit">Login</button>
+        </form>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './register.css';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
+import regLogo from './register-onilne.jpg';
 
 export default function Register({
   userSign,
@@ -95,81 +96,132 @@ export default function Register({
   };
 
   return (
-    <div className="register">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-8 m-auto">
-            <h1 className="display-2 text-center">Sign Up</h1>
-            <p className="lead text-center">Create your account</p>
-            <form onSubmit={onSubmit}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control form-control-lg"
-                  placeholder="Fisrt Name"
-                  name="firstName"
-                  value={firstName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control form-control-lg"
-                  placeholder="Last Name"
-                  name="lastName"
-                  value={lastName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="email"
-                  className="form-control form-control-lg"
-                  placeholder="Email Address"
-                  name="email"
-                  value={email}
-                  onChange={handleChange}
-                />
-                <small className="form-text text-muted">
-                  {email.length > 0 &&
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) &&
-                    'Invalid email address'}
-                </small>
-              </div>
-              <div className="form-group">
-                <input
-                  type="password"
-                  className="form-control form-control-lg"
-                  placeholder="Password"
-                  name="password"
-                  value={password}
-                  onChange={handleChange}
-                />
-                <small className="form-text text-muted">
-                  {password.length < 8
-                    ? 'Password must be at least 8 characters'
-                    : ''}
-                </small>
-              </div>
-              <div className="form-group">
-                <input
-                  type="password"
-                  className="form-control form-control-lg"
-                  placeholder="Confirm Password"
-                  name="password2"
-                  value={password2}
-                  onChange={handleChange}
-                />
-                <small className="form-text text-muted">
-                  {password !== password2 ? 'Passwords do not match' : ''}
-                </small>
-              </div>
-              <input type="submit" className="btn btn-info  mt-4" />
-            </form>
-            {/*already have an account? <Link to="/login">Login</Link>*/}
+    <div className={'big__container'}>
+      <div className={'register-img'}>
+        <img src={regLogo} alt={'register'} />
+      </div>
+      <div className="register-container">
+        <h1 id="main-title">Sign Up</h1>
+        <p id="subtitle">It only takes a minute!</p>
+        <form className={'register-form'} onSubmit={onSubmit}>
+          <div id="first-name" className="placeholders">
+            <label id="pl_first_name" htmlFor="text" className="">
+              First name
+            </label>
+            <input
+              required
+              id="pl_first_name"
+              type="text"
+              name="firstName"
+              placeholder="Enter your first name..."
+              value={firstName}
+              onChange={handleChange}
+            />
+            <small className="form-text text-muted">
+              <span className="error">
+                {firstName.length < 3 &&
+                  'First name must be at least 3 characters'}
+              </span>
+            </small>
           </div>
-        </div>
+
+          <div id="first-name" className="placeholders">
+            <label id="pl_last_name" htmlFor="text" className="">
+              Last name
+            </label>
+            <input
+              required
+              id="pl_last_name"
+              type="text"
+              name="lastName"
+              value={lastName}
+              onChange={handleChange}
+              placeholder="Enter your Last name..."
+            />
+            <small className="form-text text-muted">
+              <span className="error">
+                {lastName.length < 3 &&
+                  'Last name must be at least 3 characters'}
+              </span>
+            </small>
+          </div>
+
+          <div id="email" className="placeholders">
+            <label id="pl_email" htmlFor="text" className="">
+              Email
+            </label>
+            <input
+              required
+              id="pl_email"
+              type="email"
+              name="email"
+              placeholder="Enter your email..."
+              value={email}
+              onChange={handleChange}
+            />
+            <small className="form-text text-muted">
+              {email.length > 0 &&
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) &&
+                'Invalid email address'}
+            </small>
+          </div>
+
+          <div id="password" className="placeholders">
+            <label id="pl_password" htmlFor="text" className="">
+              Password
+            </label>
+            <input
+              required
+              id="pl_password"
+              type="password"
+              name="password"
+              placeholder="Enter your password..."
+              value={password}
+              onChange={handleChange}
+            />
+            <small className="form-text text-muted">
+              {password.length < 8
+                ? 'Password must be at least 8 characters'
+                : ''}
+            </small>
+          </div>
+
+          <div id="password" className="placeholders">
+            <label id="pl_password" htmlFor="text" className="">
+              Re-peat Password
+            </label>
+            <input
+              required
+              id="pl_password"
+              type="password"
+              name="password2"
+              placeholder="Enter your password..."
+              value={password2}
+              onChange={handleChange}
+            />
+            <small className="form-text text-muted">
+              {password !== password2 ? 'Passwords do not match' : ''}
+            </small>
+          </div>
+
+          <div className="terms-conditions">
+            <input required type="checkbox" name="vehicle1" value="Bike" />
+            <p id="terms-conditions">
+              I have read the terms and conditions of this company and accepted
+              the privacy policy.
+            </p>
+            <p className={'login-btn'}>
+              already have an account?
+              <Link to="/login">
+                <span className="login-link">Login</span>
+              </Link>
+            </p>
+          </div>
+
+          <br />
+
+          <button id="a-submit">Register</button>
+        </form>
       </div>
     </div>
   );
