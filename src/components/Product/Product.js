@@ -3,7 +3,7 @@ import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import './product.css';
+
 import {
   Card,
   CardActionArea,
@@ -83,7 +83,7 @@ const Product = (props) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Link to={`/products/${props.id}`}>
+          <Link to={`/shop/${props.productName}`}>
             <Button color="primary" variant="contained">
               View Product
             </Button>

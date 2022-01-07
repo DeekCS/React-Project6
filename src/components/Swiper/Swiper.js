@@ -111,7 +111,7 @@ const SwiperJs = () => {
                 >
                   Add to cart
                 </Button>
-                <Link to={`/product/${item.id}`}>
+                <Link to={`/shop/${item.name}`}>
                   <Button size="small" color="primary">
                     View Product
                   </Button>

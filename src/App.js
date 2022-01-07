@@ -11,6 +11,8 @@ import Services from './components/Services/Services';
 import Profile from './components/Profile/Profile';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
+import Data from './components/Cart/Data';
+import SingleProduct from './components/Product/SingleProduct/SingleProduct';
 
 function App() {
   const [userSign, setUserSign] = useState({
@@ -33,6 +35,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/shop" element={<Shop />} />
+            <Route path="/shop/:name" element={<SingleProduct data={Data} />} />
             <Route path="/cart" element={<Cart />} />
             <Route
               path="/register"
