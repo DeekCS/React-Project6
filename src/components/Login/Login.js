@@ -1,11 +1,12 @@
 import React from 'react';
-import './login.css';
 
 import swal from 'sweetalert';
 import regLogo from '../Register/register-onilne.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ userLogin, setUserLogin, isSuccess }) => {
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setUserLogin({ ...userLogin, [e.target.name]: e.target.value });
   };
@@ -35,7 +36,7 @@ const Login = ({ userLogin, setUserLogin, isSuccess }) => {
           isSuccess = true;
           console.log('Login success');
           localStorage.setItem('loggedUser', JSON.stringify(user));
-          // navigate('/todo');
+          navigate('/shop');
         }
       });
     }

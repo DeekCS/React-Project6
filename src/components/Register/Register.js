@@ -1,20 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './register.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import regLogo from './register-onilne.jpg';
 
-export default function Register({
-  userSign,
-  userLogin,
-  setUserSign,
-  setUserLogin,
-  setIsSuccess,
-  isSuccess,
-}) {
-  // const navigate = useNavigate();
+export default function Register({ userSign, setUserSign }) {
   const { firstName, lastName, email, password, password2, registered } =
     userSign;
+
+  const navigate = useNavigate();
 
   const users_data = [];
 
@@ -82,7 +76,7 @@ export default function Register({
         });
         localStorage.setItem('users', JSON.stringify(users));
         localStorage.setItem('loggedUser', JSON.stringify(user_data));
-        // navigate('/todo');
+        navigate('/shop');
       }
       setUserSign({
         firstName: '',
