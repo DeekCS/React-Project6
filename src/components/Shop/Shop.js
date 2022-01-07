@@ -56,7 +56,7 @@ const Shop = () => {
         <div className="services-overlay">
           <div className="services-content">
             <h4>Shop</h4>
-            <p>Try "Discount" Coupons, Get 10%, and more.</p>
+            <p>Try Code (OCA-22) and get 10% Discount!</p>
           </div>
         </div>
       </div>

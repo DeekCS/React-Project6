@@ -15,11 +15,10 @@ const Banner = () => {
       <div className="banner-overlay-div" />
       <div className="banner-text-div">
         <span className="banner-text">
-          <p className="banner-h1-text">
-            Remain relevant in today's technology-driven economy
-          </p>
+          <p className="banner-h1-text">Start your journey with us</p>
           <p className="banner-body-text">
-            Learn how agile can give you a competitive edge.
+            Sky Tech is a leading provider of Technical solutions for the IT
+            industry.{' '}
           </p>
           <p className="banner-btn">
             <Link to="/shop" className="banner-btn-item">

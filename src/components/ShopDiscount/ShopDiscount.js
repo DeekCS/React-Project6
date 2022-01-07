@@ -7,7 +7,7 @@ const ShopDiscount = (props) => {
       <div className="shop-overlay">
         <div className="shop-content">
           <h4>Shop</h4>
-          <p>Try "Discount" Coupons, Get 10% Discount</p>
+          <p>Try Code (OCA-22) and get 10% Discount!</p>
         </div>
       </div>
     </div>

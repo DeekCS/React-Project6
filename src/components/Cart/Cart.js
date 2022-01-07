@@ -38,7 +38,7 @@ const Cart = () => {
       });
       return false;
     }
-    if (coupon.toLowerCase() === 'discount') {
+    if (coupon.toLowerCase() === 'OCA-20') {
       setDiscount(0.1);
       setDiscountedTotal(cartTotal * 0.9);
       setSubTotal(cartTotal * 0.9);
