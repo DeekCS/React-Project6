@@ -3,11 +3,12 @@ import './SingleProduct.css';
 import { useParams, Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { useCart } from 'react-use-cart';
-import { Input } from '@mui/material';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import InnerImageZoom from 'react-inner-image-zoom';
 
 const SingleProduct = ({ data }) => {
   const { name } = useParams();
-  const { addItem, updateItemQuantity } = useCart();
+  const { addItem } = useCart();
 
   const handleAddToCart = (product) => {
     addItem(product);
@@ -38,7 +39,7 @@ const SingleProduct = ({ data }) => {
                       <span>{name}</span>
                     </div>
                     <div className="img-showcase">
-                      <img src={item.image} alt={item.name} />
+                      <InnerImageZoom src={item.image} zoomSrc={item.image} />
                     </div>
                   </div>
                 </div>

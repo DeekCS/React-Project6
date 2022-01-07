@@ -7543,6 +7543,11 @@ react-error-overlay@^6.0.10:
   resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.10.tgz"
   integrity sha512-mKR90fX7Pm5seCOfz8q9F+66VCc1PGsWSBxKbITjfKVQHMNF2zudxHnMdJiB1fRCb+XsbQV9sO9DCkgsMQgBIA==
 
+react-inner-image-zoom@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-inner-image-zoom/-/react-inner-image-zoom-2.1.0.tgz#d799f9be79ea25f42627ecd0f66b58c82af55c14"
+  integrity sha512-LT3hxk4LZDJakUBAtpNsoVFGScyZXrRnerXZ7hgWOaUTKkRB88LI5cWmNukf9iEI0fnYLl6gybjzE+N9rvC2pQ==
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"

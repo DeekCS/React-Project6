@@ -15,6 +15,7 @@
     "aos": "^2.3.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-inner-image-zoom": "^2.1.0",
     "react-owl-carousel": "^2.3.3",
     "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^6.2.1",
