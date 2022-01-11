@@ -41,3 +41,15 @@ S
 #src/components/Features/Features.js,b\f\bfd380bdca46d3af6fe02f867007ab2066a97cb0
 S
 #src/components/CartIcon/CartIcon.js,1\3\137d68143f29fccea1377203d5e75fc58933c18b
+W
+'src/components/Swiper/swiper.style.scss,5\e\5e67460c6699ec3f5eae4e9e585ab3dba364daea
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+Y
+)src/components/ServiceCard/ServiceCard.js,1\b\1b41b9a990b5d9c7d1d070011b84099f6aadd7a0
+K
+src/components/Cart/Data.js,7\4\745a2b65c8319e1ee58ed4379062ef9161e22dba
+O
+src/components/Swiper/Swiper.js,8\7\87afad423853088018bb4eff09fa88e10a3bbf5f
+S
+#src/components/Register/Register.js,a\7\a7ba49efe77348848d06eec7e10e5880d11c8b8e
