@@ -20,7 +20,7 @@ function ServiceCard() {
             <span className="hour"> {service.price}/Hours</span>
             <p className="testimonial-list">{service.description}</p>
             <button className="Services-item-purchase">
-              <Link to={`/services/${service.title}`}>Book Now</Link>
+              <Link to={`/services`}>Book Now</Link>
             </button>
           </div>
         ))}

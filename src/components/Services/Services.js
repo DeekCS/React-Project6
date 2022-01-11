@@ -152,7 +152,7 @@ const Services = () => {
           <form className={'form-services'} onSubmit={handleSubmit}>
             <div className={'services__form'}>
               <div className={'services__form-title'}>
-                <h2>Записаться на прием</h2>
+                <h2>Computer Repair Service</h2>
               </div>
               <div className={'services__form-group'}>
                 <div className={'services__form-input'}>

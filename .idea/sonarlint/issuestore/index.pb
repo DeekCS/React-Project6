@@ -3,14 +3,10 @@ X
 (src/components/ServiceCard/services.scss,7\4\7437031acd2eba253f042ae66db88eb7dec7fdbf
 U
 %src/components/Features/features.scss,d\d\dd2f85faa5c0badfbd8223a6bffea338f6d38f15
-S
-#src/components/Services/Services.js,0\9\092ca449b3194069c9ffcd2edb764a33f2139575
 O
 src/components/Footer/Footer.js,7\4\74666642fa5562fe777207b5a96d7dadad77ce22
 Q
 !src/components/Footer/footer.scss,d\c\dc4513f9897f0340ca5eb81a729535f2da6d9a72
-X
-(src/components/Services/services.data.js,6\5\65a5b6b0b4dcd3338b7c344ee3c1dd495b3cdcde
 Q
 !src/components/Profile/Profile.js,c\1\c15c819766755c2247a3289b3f2205bd8e60ab15
 =
@@ -45,8 +41,6 @@ W
 'src/components/Swiper/swiper.style.scss,5\e\5e67460c6699ec3f5eae4e9e585ab3dba364daea
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
-Y
-)src/components/ServiceCard/ServiceCard.js,1\b\1b41b9a990b5d9c7d1d070011b84099f6aadd7a0
 K
 src/components/Cart/Data.js,7\4\745a2b65c8319e1ee58ed4379062ef9161e22dba
 O
