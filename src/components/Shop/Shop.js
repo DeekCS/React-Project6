@@ -4,6 +4,7 @@ import Product from '../Product/Product';
 import { Link } from 'react-router-dom';
 import './shop.css';
 import CartIcon from '../CartIcon/CartIcon';
+
 const Shop = () => {
   const [value, setValue] = useState('');
   const [newData, setNewData] = useState(data);
@@ -38,7 +39,6 @@ const Shop = () => {
   return (
     <>
       <CartIcon />
-
       <div className="services-container">
         <div className="services-overlay">
           <div className="services-content">
@@ -51,7 +51,6 @@ const Shop = () => {
             <input
               type="text"
               placeholder="Search for product"
-              value={value}
               onChange={handleChange}
             />
           </form>
