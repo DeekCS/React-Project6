@@ -95,7 +95,7 @@ const Profile = ({ checkedOrder, setCheckedOrder }) => {
               borderBottom: '1px solid #e0e0e0',
             }}
           >
-            <h3>Total Price: {total}</h3>
+            <h3>Total Price: {total * 0.9}</h3>
           </div>
         </>
       );
