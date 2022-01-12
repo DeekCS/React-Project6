@@ -143,7 +143,10 @@ const Cart = ({ checkedOrder, setCheckedOrder }) => {
         }
         swal('Checked out!', {
           icon: 'success',
-        }).then(() => emptyCart(items));
+        }).then(() => {
+          emptyCart(items);
+          navigate('/profile');
+        });
       } else {
         swal('Your imaginary file is safe!').then(
           () =>

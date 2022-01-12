@@ -27,6 +27,7 @@ const Profile = ({ checkedOrder, setCheckedOrder }) => {
   const logout = () => {
     localStorage.removeItem('loggedUser');
     localStorage.removeItem('react-use-cart');
+    localStorage.removeItem('orders');
     navigate('/');
   };
 
