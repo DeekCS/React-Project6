@@ -211,6 +211,36 @@ export default function Header() {
     return getDrawerChoices();
   };
 
+  //use Effet to change the title of the page depending on the route
+  useEffect(() => {
+    let path = window.location.pathname;
+    let title = '';
+    switch (path) {
+      case '/':
+        title = 'Sky Tech | Home';
+        break;
+      case '/shop':
+        title = 'Sky Tech | Shop';
+        break;
+      case '/services':
+        title = 'Sky Tech | Services';
+        break;
+      case '/cart':
+        title = 'Sky Tech | Cart';
+        break;
+      case '/login':
+        title = 'Sky Tech | Login';
+        break;
+      case '/profile':
+        title = 'Sky Tech | Profile';
+        break;
+      default:
+        title = 'Sky Tech | Home';
+        break;
+    }
+    document.title = title;
+  });
+
   return (
     <header>
       <AppBar className={header}>

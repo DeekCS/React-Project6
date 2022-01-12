@@ -25,39 +25,58 @@ const Shop = () => {
     }
   };
 
+  //search for product
+  const searchProduct = (e) => {
+    e.preventDefault();
+    const search = value.toLowerCase();
+    const newData = data.filter((product) => {
+      return product.name.toLowerCase().includes(search);
+    });
+    setNewData(newData);
+  };
+
   return (
     <>
       <CartIcon />
-      <form>
-        <select
-          className="btn btn-primary"
-          id="rating-filter"
-          value={value}
-          onChange={handleChange}
-        >
-          <option style={{ background: 'white', color: 'black' }} value="Sort">
-            Sort
-          </option>
-          <option
-            style={{ background: 'white', color: 'black' }}
-            value="Low price"
-          >
-            Low price
-          </option>
-          <option
-            style={{ background: 'white', color: 'black' }}
-            value="High price"
-          >
-            High price
-          </option>
-        </select>
-      </form>
+
       <div className="services-container">
         <div className="services-overlay">
           <div className="services-content">
             <h4>Shop</h4>
             <p>Try Code (OCA-22) and get 10% Discount!</p>
           </div>
+        </div>
+        <div className={'forms-div'}>
+          <form onSubmit={searchProduct} className={'search-product'}>
+            <input
+              type="text"
+              placeholder="Search for product"
+              value={value}
+              onChange={handleChange}
+            />
+          </form>
+          <form className={'filters-form'}>
+            <select id="product-filter" value={value} onChange={handleChange}>
+              <option
+                style={{ background: 'white', color: 'black' }}
+                value="Sort"
+              >
+                Sort
+              </option>
+              <option
+                style={{ background: 'white', color: 'black' }}
+                value="Low price"
+              >
+                Low price
+              </option>
+              <option
+                style={{ background: 'white', color: 'black' }}
+                value="High price"
+              >
+                High price
+              </option>
+            </select>
+          </form>
         </div>
       </div>
       <div className="showProduct">

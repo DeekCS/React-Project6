@@ -21,8 +21,6 @@ R
 "src/components/Profile/profile.css,2\3\23943bb2ca9bf17158aa3cce01b5bd1006a8985b
 T
 $src/components/Services/services.css,d\a\da046f77d6af745ca40a25addc7d357bcf7df56c
-L
-src/components/Shop/shop.css,7\7\77aa3e00f7097703da57f9274b304c4a6a541ef6
 ]
 -src/components/ShopDiscount/shopDiscount.scss,1\6\168c1c6001ad5ebda55875cb8267a30b6603c0eb
 Y

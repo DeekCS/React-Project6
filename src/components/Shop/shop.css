@@ -60,3 +60,48 @@
   color: #fff;
   font-size: 1.5rem;
 }
+
+.filters-form {
+  margin-left: 1rem;
+}
+
+.filters-form select {
+  background-color: #5a66d7;
+  color: #fff;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1em;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+.search-product input {
+  color: #000;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.8em;
+  margin-bottom: 1rem;
+  /*position: relative;*/
+  z-index: 1;
+}
+
+.forms-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  padding-right: 1em;
+  margin-bottom: 3em;
+}
+
+@media (max-width: 300px) {
+  .search-product input {
+    margin-left: 1em;
+  }
+}
