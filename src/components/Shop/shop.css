@@ -4,7 +4,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
   grid-gap: 10px;
-  margin-top: 3rem;
+  margin-top: 5rem;
   padding: 1rem;
 }
 
@@ -27,6 +27,9 @@
     justify-content: center;
     grid-gap: 10px;
     align-items: center;
+  }
+  .services-content p {
+    text-align: center;
   }
 }
 /*product*/
@@ -109,7 +112,6 @@
   justify-content: center;
   margin-top: 1em;
   padding-right: 1em;
-  margin-bottom: 3em;
 }
 
 @media (max-width: 300px) {
