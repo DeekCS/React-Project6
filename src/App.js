@@ -28,6 +28,8 @@ function App() {
     password: '',
   });
 
+  const [checkedOrder, setCheckedOrder] = useState(false);
+
   return (
     <div className="App">
       <CartProvider>
@@ -36,7 +38,15 @@ function App() {
           <Routes>
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/:name" element={<SingleProduct data={Data} />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  checkedOrder={checkedOrder}
+                  setCheckedOrder={setCheckedOrder}
+                />
+              }
+            />
             <Route
               path="/register"
               element={
@@ -50,7 +60,15 @@ function App() {
               }
             />
             <Route path="/services" element={<Services />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  checkedOrder={checkedOrder}
+                  setCheckedOrder={setCheckedOrder}
+                />
+              }
+            />
             <Route path="/" element={<Home />} />
           </Routes>
           <Footer />

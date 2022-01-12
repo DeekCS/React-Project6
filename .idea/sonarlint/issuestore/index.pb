@@ -7,8 +7,6 @@ O
 src/components/Footer/Footer.js,7\4\74666642fa5562fe777207b5a96d7dadad77ce22
 Q
 !src/components/Footer/footer.scss,d\c\dc4513f9897f0340ca5eb81a729535f2da6d9a72
-Q
-!src/components/Profile/Profile.js,c\1\c15c819766755c2247a3289b3f2205bd8e60ab15
 =
 src/index.css,c\5\c5d38a62d1faae90a2acaa34b79a7ef365c917e4
 ;
@@ -47,3 +45,7 @@ O
 src/components/Swiper/Swiper.js,8\7\87afad423853088018bb4eff09fa88e10a3bbf5f
 S
 #src/components/Register/Register.js,a\7\a7ba49efe77348848d06eec7e10e5880d11c8b8e
+e
+5src/components/Product/SingleProduct/SingleProduct.js,7\0\7080e4982b534f1ac9eb56dfe3e39e8dc76ac657
+O
+src/components/Banner/Banner.js,3\c\3cffbcc7308bcbd1de323b7531ea0804642b09bc

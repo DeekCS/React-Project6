@@ -58,12 +58,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Header({
-  setUiAvatars,
-  setAvatarURL,
-  avatarURL,
-  uiavatars,
-}) {
+export default function Header() {
   const { header, logo, menuButton, toolbar, drawerContainer, menuLinksWeb } =
     useStyles();
 
@@ -136,6 +131,7 @@ export default function Header({
     );
   };
   let loggedUser = localStorage.getItem('loggedUser');
+
   const getDrawerChoices = () => {
     return (
       <div className={menuLinksWeb}>

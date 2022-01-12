@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
 import './cart.scss';
 import Button from '@mui/material/Button';
-const Cart = () => {
+const Cart = ({ checkedOrder, setCheckedOrder }) => {
   const navigate = useNavigate();
   let {
     isEmpty,
@@ -21,6 +21,7 @@ const Cart = () => {
   const [discount, setDiscount] = useState(0);
   const [discountedTotal, setDiscountedTotal] = useState(cartTotal);
   const [discountClicked, setDiscountClicked] = useState(false);
+
   const handleCoupon = (e) => {
     e.preventDefault();
     console.log(coupon);
@@ -114,12 +115,63 @@ const Cart = () => {
     });
   };
 
+  const checkout = () => {
+    setCheckedOrder(true);
+
+    swal({
+      title: 'Are you sure?',
+      text: 'Once checked sure, you will not be able to undo this!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((r) => {
+      if (r) {
+        const localData = JSON.parse(localStorage.getItem('react-use-cart'));
+
+        const { items } = localData;
+
+        const orders = [];
+
+        orders.push(items);
+
+        if (!localStorage.getItem('orders')) {
+          localStorage.setItem('orders', JSON.stringify(orders));
+        } else {
+          const newOrders = JSON.parse(localStorage.getItem('orders'));
+          orders.push(...newOrders);
+          localStorage.setItem('orders', JSON.stringify(orders));
+        }
+        swal('Checked out!', {
+          icon: 'success',
+        }).then(() => emptyCart(items));
+      } else {
+        swal('Your imaginary file is safe!').then(
+          () =>
+            localStorage.getItem('react-use-cart') &&
+            localStorage.setItem(
+              'react-use-cart',
+              JSON.stringify({
+                ...JSON.parse(localStorage.getItem('react-use-cart')),
+                cartTotal: cartTotal,
+              })
+            )
+        );
+      }
+    });
+  };
+
   return (
     <>
       <div className="wrap">
         <header className="cart-header cf">
           <strong>{totalUniqueItems} Item(s) in Your Cart</strong>
-          {isEmpty ? '' : <span className="btn">Checkout</span>}
+          {isEmpty ? (
+            ''
+          ) : (
+            <span className="btn" onClick={checkout}>
+              Checkout
+            </span>
+          )}
         </header>
         <div className="cart-table">
           {isEmpty ? (

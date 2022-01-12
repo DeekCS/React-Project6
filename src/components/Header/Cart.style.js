@@ -1,6 +1,7 @@
 const cartStyle = {
   table: {
     minWidth: 650,
+    marginBottom: 20,
   },
   tableWrapper: {
     overflowX: 'auto',
