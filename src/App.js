@@ -13,6 +13,7 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Data from './components/Cart/Data';
 import SingleProduct from './components/Product/SingleProduct/SingleProduct';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   const [userSign, setUserSign] = useState({
@@ -34,6 +35,7 @@ function App() {
     <div className="App">
       <CartProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/shop" element={<Shop />} />
