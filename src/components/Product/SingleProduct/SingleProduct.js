@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SingleProduct.css';
 import { useParams, Link } from 'react-router-dom';
 import swal from 'sweetalert';
@@ -20,6 +20,10 @@ const SingleProduct = ({ data }) => {
       timer: 1000,
     });
   };
+  useEffect(() => {
+    data.filter((item) => item.name === name);
+    document.title = `Sky Tech | ${name}`;
+  }, [data, name]);
 
   return (
     <div className={'single-product_container'}>

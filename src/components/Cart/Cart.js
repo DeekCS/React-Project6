@@ -163,6 +163,10 @@ const Cart = ({ checkedOrder, setCheckedOrder }) => {
     });
   };
 
+  useEffect(() => {
+    document.title = `Sky Tech | Cart`;
+  }, []);
+
   return (
     <>
       <div className="wrap">

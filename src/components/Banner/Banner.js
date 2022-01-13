@@ -2,7 +2,6 @@ import React from 'react';
 import './banner.scss';
 import { Link } from 'react-router-dom';
 const Banner = () => {
-  //hero image with button , grid template
   return (
     <section className="top-banner-section">
       <div className="banner-image-div">

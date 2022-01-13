@@ -142,12 +142,16 @@ const Services = () => {
     }
   };
 
+  useEffect(() => {
+    document.title = `Sky Tech | Services`;
+  }, []);
+
   return (
     <>
       <div className={'wrapper'}>
         <div className={'services'}>
           <div className={'services__img'}>
-            <img src={'/booking.svg'} alt={'services-1'} />
+            {/*<img src={'/booking.svg'} alt={'services-1'} />*/}
           </div>
           <form className={'form-services'} onSubmit={handleSubmit}>
             <div className={'services__form'}>
@@ -235,12 +239,15 @@ const Services = () => {
               <div className={'services__form-group'}>
                 <div className={'services__form-input'}>
                   <span className="form-control">
-                    {reservation.startTime && reservation.finishTime
-                      ? (
-                          ((Number(newFTime) - Number(newSTime)) / 100) *
-                          service[0].price
-                        ).toFixed(2)
-                      : 0}
+                    <p className={'total'}>
+                      Total :
+                      {reservation.startTime && reservation.finishTime
+                        ? (
+                            ((Number(newFTime) - Number(newSTime)) / 100) *
+                            service[0].price
+                          ).toFixed(2)
+                        : 0}
+                    </p>
                   </span>
                 </div>
               </div>

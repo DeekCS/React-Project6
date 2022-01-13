@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import swal from 'sweetalert';
 import regLogo from '../Register/register-onilne.jpg';
@@ -50,6 +50,10 @@ const Login = ({ userLogin, setUserLogin, isSuccess }) => {
       });
     }
   };
+
+  useEffect(() => {
+    document.title = `Sky Tech | Login`;
+  }, []);
 
   return (
     <div className="big__container">

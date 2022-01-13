@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './register.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
@@ -88,6 +88,10 @@ export default function Register({ userSign, setUserSign }) {
       });
     }
   };
+
+  useEffect(() => {
+    document.title = `Sky Tech | Register`;
+  }, []);
 
   return (
     <div className={'big__container'}>

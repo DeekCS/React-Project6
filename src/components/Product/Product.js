@@ -52,6 +52,10 @@ const Product = (props) => {
     textAlign: 'center',
   };
 
+  useEffect(() => {
+    document.title = `Sky Tech | Shop`;
+  }, []);
+
   return (
     <>
       <Card

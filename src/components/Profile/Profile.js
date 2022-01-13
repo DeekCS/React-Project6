@@ -101,6 +101,11 @@ const Profile = ({ checkedOrder, setCheckedOrder }) => {
       );
     });
   };
+
+  useEffect(() => {
+    document.title = `Sky Tech | Profile`;
+  }, []);
+
   return (
     <div className="profile" style={style.div}>
       <div className="profile-body">

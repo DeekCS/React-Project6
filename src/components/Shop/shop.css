@@ -119,3 +119,7 @@
     margin-left: 1em;
   }
 }
+
+.form-control {
+  font-size: 1em;
+}
