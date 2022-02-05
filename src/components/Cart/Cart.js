@@ -11,7 +11,6 @@ const Cart = ({ checkedOrder, setCheckedOrder }) => {
     totalUniqueItems,
     items,
     updateItemQuantity,
-    removeItem,
     cartTotal,
     emptyCart,
   } = useCart();

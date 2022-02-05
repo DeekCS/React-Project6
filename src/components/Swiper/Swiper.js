@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Data from '../Cart/Data';
 import { useCart } from 'react-use-cart';
 import './swiper.style.scss';
@@ -12,8 +12,8 @@ import {
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import swal from 'sweetalert';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -36,6 +36,18 @@ const styles = {
 };
 const SwiperJs = () => {
   const { addItem } = useCart();
+
+  const handleAddItem = (item) => {
+    addItem(item);
+    swal({
+      title: 'Added to cart',
+      text: 'Item added to cart',
+      icon: 'success',
+      timer: 1000,
+      button: false,
+    });
+  };
+
 
   return (
     <>
@@ -107,7 +119,7 @@ const SwiperJs = () => {
                 <Button
                   size="small"
                   color="primary"
-                  onClick={() => addItem(item)}
+                  onClick={() => handleAddItem(item)}
                 >
                   Add to cart
                 </Button>

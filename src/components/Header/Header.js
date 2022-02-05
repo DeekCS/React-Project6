@@ -203,7 +203,15 @@ export default function Header() {
   };
   const femmecubatorLogo = (
     <Typography variant="h6" component="h4" className={logo}>
-      Sky Tech
+      <Link
+        {...{
+          color: 'inherit',
+          to: '/',
+          component: RouterLink,
+        }}
+      >
+        <img src={'/logo192.png'} alt="sky-tech" style={{ width: '100px' }} />
+      </Link>
     </Typography>
   );
 

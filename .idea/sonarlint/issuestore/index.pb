@@ -21,14 +21,10 @@ S
 #src/components/Features/Features.js,b\f\bfd380bdca46d3af6fe02f867007ab2066a97cb0
 S
 #src/components/CartIcon/CartIcon.js,1\3\137d68143f29fccea1377203d5e75fc58933c18b
-W
-'src/components/Swiper/swiper.style.scss,5\e\5e67460c6699ec3f5eae4e9e585ab3dba364daea
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 K
 src/components/Cart/Data.js,7\4\745a2b65c8319e1ee58ed4379062ef9161e22dba
-O
-src/components/Swiper/Swiper.js,8\7\87afad423853088018bb4eff09fa88e10a3bbf5f
 Y
 )src/components/ServiceCard/ServiceCard.js,1\b\1b41b9a990b5d9c7d1d070011b84099f6aadd7a0
 X
@@ -47,3 +43,29 @@ A
 public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 K
 src/components/Shop/Shop.js,2\6\26f253c6471985a3fd697ea5d2e77ee30a5ad7b2
+=
+src/index.css,c\5\c5d38a62d1faae90a2acaa34b79a7ef365c917e4
+[
++src/components/ShopDiscount/ShopDiscount.js,0\3\03e75d050d3ac5e259e0590ffd505682eced0a96
+T
+$src/components/Services/services.css,d\a\da046f77d6af745ca40a25addc7d357bcf7df56c
+Y
+)src/components/Testimonial/Testimonial.js,6\1\61d8f78a8b24165e07b533a7b469f6466911d7ea
+[
++src/components/Testimonial/testimonial.scss,c\7\c792fe0d424f3c0cb34b59360b332f88b31d9110
+S
+#src/components/Register/Register.js,a\7\a7ba49efe77348848d06eec7e10e5880d11c8b8e
+Q
+!src/components/Profile/Profile.js,c\1\c15c819766755c2247a3289b3f2205bd8e60ab15
+K
+src/components/Home/Home.js,4\4\4456e8506efee3f50c70cf5607346b1e4963e449
+Q
+!src/components/Product/Product.js,a\c\ac447c408b1ddefc7e81eda6c87b444ea50539db
+S
+#src/components/Services/Services.js,0\9\092ca449b3194069c9ffcd2edb764a33f2139575
+M
+src/components/Login/Login.js,b\c\bcee4d5907e2a8c78ed11f36d8720a46be5b2c7a
+e
+5src/components/Product/SingleProduct/SingleProduct.js,7\0\7080e4982b534f1ac9eb56dfe3e39e8dc76ac657
+W
+'src/components/Swiper/swiper.style.scss,5\e\5e67460c6699ec3f5eae4e9e585ab3dba364daea

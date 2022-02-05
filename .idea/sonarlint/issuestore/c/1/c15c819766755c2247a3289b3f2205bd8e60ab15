@@ -1,0 +1,9 @@
+
+Qjavascript:S1117".'user' is already declared in the upper scope.(øë¾è8ÕçÊ“å/
+^javascript:S1481)"6Remove the declaration of the unused 'items' variable.(ì¶­üÿÿÿÿ8ÖçÊ“å/
+[javascript:S1854)"3Remove this useless assignment to variable "items".(ì¶­üÿÿÿÿ8ØçÊ“å/
+]javascript:S1481*":Remove the declaration of the unused 'cartTotal' variable.(¼ù8ÙçÊ“å/
+Zjavascript:S1854*"7Remove this useless assignment to variable "cartTotal".(¼ù8ÚçÊ“å/
+[javascript:S1481+"8Remove the declaration of the unused 'isEmpty' variable.(ƒöÙù8ÛçÊ“å/
+Xjavascript:S1854+"5Remove this useless assignment to variable "isEmpty".(ƒöÙù8İçÊ“å/
+Qjavascript:S1117G"/'index' is already declared in the upper scope.(úĞØ 8ŞçÊ“å/
